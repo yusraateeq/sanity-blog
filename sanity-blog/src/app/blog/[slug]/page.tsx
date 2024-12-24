@@ -12,7 +12,7 @@ import Link from 'next/link';
 interface IBlogDetails {
   name: string;
   subheading: string;
-  content: string;
+  content: object;
   poster?: {
     asset: {
       _ref: string;
