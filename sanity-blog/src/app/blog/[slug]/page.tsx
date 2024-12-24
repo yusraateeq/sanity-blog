@@ -1,5 +1,4 @@
 "use client"
-
 import { useEffect, useState } from 'react';
 import { client } from '@/sanity/lib/client';
 import { PortableText } from '@portabletext/react';
@@ -8,11 +7,12 @@ import Header from '@/app/Components/Header';
 import Footer from '@/app/Components/Footer';
 import { urlFor } from '@/sanity/lib/image';
 import Link from 'next/link';
+import { PortableTextBlock } from '@portabletext/react'; // Import PortableTextBlock
 
 interface IBlogDetails {
   name: string;
   subheading: string;
-  content: object;
+  content: PortableTextBlock[]; // Change the type here
   poster?: {
     asset: {
       _ref: string;
